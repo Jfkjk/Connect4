@@ -1,0 +1,47 @@
+
+body{
+    height: calc(100vh - 4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board{
+margin: 0;
+padding: 0;
+display: flex;
+border: 2px solid royalblue;
+height: 400px;
+width: 400px;
+}
+
+.column{
+display: flex;
+align-items: center;
+flex-direction: column-reverse;
+border: 2px solid royalblue;
+flex: 1;
+}
+.checker{
+border-radius: 50%;
+  align-items: center;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+}
+ .red{
+    background-color: red;
+}
+.black{
+    background-color: black;
+}
+.row{
+    border: 2px solid royalblue;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    border-radius: 60000%;
+    flex-basis: 100px;
+    align-items: center;
+    width: 100px;
+  height: 100px;
+}
