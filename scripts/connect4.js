@@ -1,32 +1,29 @@
 var currentPlayer = "red";
-var column = document.querySelectorAll(".column");
+var row = document.querySelectorAll(".row");
+
+let board = [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+];
 
 
 
+row.forEach(row => {
+	row.addEventListener("click", event => {
+  	if (row.children.length < 1) {
+      let checker = document.createElement("div");
+      checker.classList.add(currentPlayer, "checker");
+      row.appendChild(checker);
+        currentPlayer = currentPlayer === "red" ? "black" : "red";
+    }
+  });
+})
 
 
 
-Connect4 = function(event){
-    console.log("click")
-    let cell = event.target;
-    //cell.innerHTML = currentPlayer;
-    if (currentPlayer==="red"){
-        /*
-        let checker = document.createElement("div");
-        checker.classList.add("checker","red");
-        cell.appendChild(checker);;*/
-        currentPlayer="black";
-        cell.classList+=' '+currentPlayer;
-}else if(currentPlayer ==="black") {
-    /*
-    let checker = document.createElement("div");
-        checker.classList.add("checker","black");
-        cell.appendChild(checker);;*/
-        currentPlayer = "red"
-        cell.classList+=' '+currentPlayer;
-  }
-}
-
-for(var i = 0; i < column.length; i++) {
-    column[i].addEventListener('click', Connect4)
-  };
+    
